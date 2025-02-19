@@ -36,5 +36,5 @@ module shift_register #(
             out_q <= out_d;
         end
     end
-    
+
 endmodule
