@@ -25,7 +25,7 @@ module shift_register #(
             NA: out_d = out_q;
             RIGHT: out_d = {serial_i, out_q[WIDTH-1:1]};
             LOAD: out_d = word_i;
-            LEFT: out_d = {out_q[WIDTH-2:0, serial_i]};
+            LEFT: out_d = {out_q[WIDTH-2:0], serial_i};
         endcase
     end
 
@@ -36,4 +36,5 @@ module shift_register #(
             out_q <= out_d;
         end
     end
+    
 endmodule
